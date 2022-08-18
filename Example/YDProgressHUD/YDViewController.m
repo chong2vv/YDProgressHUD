@@ -7,6 +7,7 @@
 //
 
 #import "YDViewController.h"
+#import <YDProgressHUD/YDProgressHUD.h>
 
 @interface YDViewController ()
 
@@ -18,6 +19,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [YDProgressHUD showSuccessWithStatus:@"哈哈哈"];
 }
 
 - (void)didReceiveMemoryWarning
