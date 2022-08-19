@@ -6,7 +6,7 @@
 //  Copyright © 2022 wangyuandong. All rights reserved.
 //
 
-#import <YDProgressHUD/YDProgressHUDConfig.h>
+#import <YDSVProgressHUD/YDProgressHUD.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

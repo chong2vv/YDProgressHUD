@@ -7,8 +7,8 @@
 //
 
 #import "YDViewController.h"
-#import <YDProgressHUD/YDProgressHUD.h>
-#import <YDProgressHUD/UIViewController+Toast.h>
+#import <YDSVProgressHUD/YDProgressHUD.h>
+#import <YDSVProgressHUD/UIViewController+Toast.h>
 #import "YDProgressHUDConfig+YDUIConfig.h"
 
 @interface YDViewController ()
