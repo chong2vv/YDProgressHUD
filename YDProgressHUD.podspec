@@ -33,11 +33,12 @@ TODO: Add long description of the pod here.
   s.source_files = 'YDProgressHUD/Classes/**/*'
   
   s.resource_bundles = {
-    'YDProgressHUD' => ['YDProgressHUD/Assets/*.png']
+    'YDProgressHUD' => ['YDProgressHUD/Assets/*']
   }
 
   s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'Foundation'
-  s.dependency 'SVProgressHUD'
-  s.dependency 'lottie-ios'
+  s.dependency 'SVProgressHUD','2.2.5'
+  s.dependency 'lottie-ios', '2.5.3'
+  s.dependency 'YYImage'
 end

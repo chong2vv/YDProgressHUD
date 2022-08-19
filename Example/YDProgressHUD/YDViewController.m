@@ -8,6 +8,8 @@
 
 #import "YDViewController.h"
 #import <YDProgressHUD/YDProgressHUD.h>
+#import <YDProgressHUD/UIViewController+Toast.h>
+#import "YDProgressHUDConfig+YDUIConfig.h"
 
 @interface YDViewController ()
 
@@ -18,8 +20,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    [YDProgressHUD showSuccessWithStatus:@"哈哈哈"];
+    UIButton *testBt = [UIButton buttonWithType:UIButtonTypeSystem];
+    [testBt setTitle:@"测试" forState:UIControlStateNormal];
+    [self.view addSubview:testBt];
+    testBt.frame = CGRectMake(100, 200, 200, 200);
+    [testBt addTarget:self action:@selector(testAction) forControlEvents:UIControlEventTouchUpInside];
+    
+}
+
+- (void)testAction {
+    [self showErrorText:@"cuowu"];
 }
 
 - (void)didReceiveMemoryWarning

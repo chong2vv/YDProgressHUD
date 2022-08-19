@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SVProgressHUD (YDLottie)
 
+
 @end
 
 NS_ASSUME_NONNULL_END

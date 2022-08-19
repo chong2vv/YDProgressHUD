@@ -27,7 +27,7 @@
     [self setErrorImage:errorImage];
     
     [self setDefaultMaskType:SVProgressHUDMaskTypeClear];
-    [self setDefaultStyle:SVProgressHUDStyleDark];
+    [self setDefaultStyle:YDProgressHUDStyleDark];
     [self setCornerRadius:12.0];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissAction:) name:SVProgressHUDDidReceiveTouchEventNotification object:nil];
     [self customInitialize];
@@ -106,23 +106,22 @@
 // progress：百分百值 0-100
 +(void)showProgress:(NSInteger)progress
 {
-  [SVProgressHUD showProgress:progress/100.0 status:[NSString stringWithFormat:@"%li%%",(long)progress]];
+  [YDOverWriteSVProgressHUD showProgress:progress/100.0 status:[NSString stringWithFormat:@"%li%%",(long)progress]];
 }
 
 + (void)showText:(NSString *)aText orientation:(UIInterfaceOrientation)orientation
 {
-//  [SVProgressHUD changeOrientation:orientation];
-  [SVProgressHUD showInfoWithStatus:aText];
+  [YDOverWriteSVProgressHUD changeOrientation:orientation];
+  [YDOverWriteSVProgressHUD showInfoWithStatus:aText];
 }
 
 + (void)showImage:(UIImage *)image status:(NSString *)status duration:(NSTimeInterval)duration {
     objc_setAssociatedObject(self, "kBlockOperation", @(YES), OBJC_ASSOCIATION_RETAIN);
-    [SVProgressHUD showImage:image status:status];
-    [SVProgressHUD dismissWithDelay:duration];
+    [YDOverWriteSVProgressHUD showImage:image status:status duration:duration];
 }
 +(void)showLottieView:(NSString *)jsonPath bgImage:(UIImage *)image status:(NSString *)status {
     objc_setAssociatedObject(self, "kBlockOperation", @(YES), OBJC_ASSOCIATION_RETAIN);
-//    [SVProgressHUD showLottieView:jsonPath bgImage:image status:status];
+    [YDOverWriteSVProgressHUD showLottieView:jsonPath bgImage:image status:status];
 }
 #pragma clang diagnostic pop
 

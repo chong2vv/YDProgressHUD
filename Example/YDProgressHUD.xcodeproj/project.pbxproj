@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15C6472F28AF769C00D94631 /* YDProgressHUDConfig+YDUIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C6472E28AF769C00D94631 /* YDProgressHUDConfig+YDUIConfig.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -66,6 +67,12 @@
 		15C5BDC328AE384000E5B1EC /* YDProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDProgressHUD.m; sourceTree = "<group>"; };
 		15C5BDC428AE3B2400E5B1EC /* SVProgressHUD+YDLottie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD+YDLottie.h"; sourceTree = "<group>"; };
 		15C5BDC528AE3B2400E5B1EC /* SVProgressHUD+YDLottie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD+YDLottie.m"; sourceTree = "<group>"; };
+		15C6472628AF4D7A00D94631 /* YDOverWriteSVProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDOverWriteSVProgressHUD.h; sourceTree = "<group>"; };
+		15C6472728AF4D7A00D94631 /* YDOverWriteSVProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDOverWriteSVProgressHUD.m; sourceTree = "<group>"; };
+		15C6472828AF5B5F00D94631 /* UIViewController+Toast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Toast.h"; sourceTree = "<group>"; };
+		15C6472928AF5B5F00D94631 /* UIViewController+Toast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Toast.m"; sourceTree = "<group>"; };
+		15C6472D28AF769C00D94631 /* YDProgressHUDConfig+YDUIConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YDProgressHUDConfig+YDUIConfig.h"; sourceTree = "<group>"; };
+		15C6472E28AF769C00D94631 /* YDProgressHUDConfig+YDUIConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YDProgressHUDConfig+YDUIConfig.m"; sourceTree = "<group>"; };
 		23C7A25EB1F8DBE69480BF3F /* Pods_YDProgressHUD_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YDProgressHUD_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C4DFB26A0FD338FB2B44C9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4A580412BF32C7AFCE93BA05 /* Pods_YDProgressHUD_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YDProgressHUD_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +100,7 @@
 		876D91FDD44D8A27A5E76DDB /* Pods-YDProgressHUD_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDProgressHUD_Tests.debug.xcconfig"; path = "Target Support Files/Pods-YDProgressHUD_Tests/Pods-YDProgressHUD_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9AB9D0A4486847532E16C1BC /* Pods-YDProgressHUD_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDProgressHUD_Example.release.xcconfig"; path = "Target Support Files/Pods-YDProgressHUD_Example/Pods-YDProgressHUD_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9B5C35B5B4ECE167A7DE744E /* Pods-YDProgressHUD_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDProgressHUD_Example.debug.xcconfig"; path = "Target Support Files/Pods-YDProgressHUD_Example/Pods-YDProgressHUD_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		ADD8CEF4B3F5D2F935B86049 /* YDProgressHUD.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YDProgressHUD.podspec; path = ../YDProgressHUD.podspec; sourceTree = "<group>"; };
+		ADD8CEF4B3F5D2F935B86049 /* YDProgressHUD.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YDProgressHUD.podspec; path = ../YDProgressHUD.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +146,10 @@
 				15C5BDAC28AE371000E5B1EC /* YDProgressHUDConfig.m */,
 				15C5BDC228AE384000E5B1EC /* YDProgressHUD.h */,
 				15C5BDC328AE384000E5B1EC /* YDProgressHUD.m */,
+				15C6472628AF4D7A00D94631 /* YDOverWriteSVProgressHUD.h */,
+				15C6472728AF4D7A00D94631 /* YDOverWriteSVProgressHUD.m */,
+				15C6472828AF5B5F00D94631 /* UIViewController+Toast.h */,
+				15C6472928AF5B5F00D94631 /* UIViewController+Toast.m */,
 				15C5BDC428AE3B2400E5B1EC /* SVProgressHUD+YDLottie.h */,
 				15C5BDC528AE3B2400E5B1EC /* SVProgressHUD+YDLottie.m */,
 			);
@@ -216,6 +227,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* YDViewController.h */,
 				6003F5A6195388D20070C39A /* YDViewController.m */,
+				15C6472D28AF769C00D94631 /* YDProgressHUDConfig+YDUIConfig.h */,
+				15C6472E28AF769C00D94631 /* YDProgressHUDConfig+YDUIConfig.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -446,12 +459,14 @@
 				"${PODS_ROOT}/Target Support Files/Pods-YDProgressHUD_Example/Pods-YDProgressHUD_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/YDProgressHUD/YDProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YDProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C6472F28AF769C00D94631 /* YDProgressHUDConfig+YDUIConfig.m in Sources */,
 				6003F59E195388D20070C39A /* YDAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* YDViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

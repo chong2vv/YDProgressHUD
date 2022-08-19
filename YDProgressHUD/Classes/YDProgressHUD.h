@@ -6,9 +6,10 @@
 //  Copyright © 2022 wangyuandong. All rights reserved.
 //
 
-#import <SVProgressHUD/SVProgressHUD.h>
+#import "YDOverWriteSVProgressHUD.h"
+#import "YDProgressHUDConfig.h"
 
-@interface YDProgressHUD : SVProgressHUD
+@interface YDProgressHUD : YDOverWriteSVProgressHUD
 
 + (void)customInitialize;
 
