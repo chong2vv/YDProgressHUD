@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YDSVProgressHUD'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A short description of YDSVProgressHUD.'
 
 # This description is used to generate tags and improve search results.
@@ -30,10 +30,10 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'YDProgressHUD/Classes/**/*'
+  s.source_files = 'YDSVProgressHUD/Classes/**/*'
   
   s.resource_bundles = {
-    'YDProgressHUD' => ['YDProgressHUD/Assets/*']
+    'YDProgressHUD' => ['YDSVProgressHUD/Assets/*']
   }
 
   s.public_header_files = 'Pod/Classes/**/*.h'
