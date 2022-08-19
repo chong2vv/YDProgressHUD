@@ -3,7 +3,7 @@ use_frameworks!
 platform :ios, '10.0'
 
 target 'YDProgressHUD_Example' do
-  pod 'YDProgressHUD', :path => '../'
+  pod 'YDSVProgressHUD', :path => '../'
 
   target 'YDProgressHUD_Tests' do
     inherit! :search_paths
