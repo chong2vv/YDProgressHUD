@@ -31,14 +31,14 @@
 #import "YDProgressHUDConfig.h"
 #import <Lottie/LOTAnimationView.h>
 
-NSString * const SVProgressHUDDidReceiveTouchEventNotification = @"SVProgressHUDDidReceiveTouchEventNotification";
-NSString * const SVProgressHUDDidTouchDownInsideNotification = @"SVProgressHUDDidTouchDownInsideNotification";
-NSString * const SVProgressHUDWillDisappearNotification = @"SVProgressHUDWillDisappearNotification";
-NSString * const SVProgressHUDDidDisappearNotification = @"SVProgressHUDDidDisappearNotification";
-NSString * const SVProgressHUDWillAppearNotification = @"SVProgressHUDWillAppearNotification";
-NSString * const SVProgressHUDDidAppearNotification = @"SVProgressHUDDidAppearNotification";
+NSString * const YDSVProgressHUDDidReceiveTouchEventNotification = @"YDSVProgressHUDDidReceiveTouchEventNotification";
+NSString * const YDSVProgressHUDDidTouchDownInsideNotification = @"YDSVProgressHUDDidTouchDownInsideNotification";
+NSString * const YDSVProgressHUDWillDisappearNotification = @"YDSVProgressHUDWillDisappearNotification";
+NSString * const YDSVProgressHUDDidDisappearNotification = @"YDSVProgressHUDDidDisappearNotification";
+NSString * const YDSVProgressHUDWillAppearNotification = @"YDSVProgressHUDWillAppearNotification";
+NSString * const YDSVProgressHUDDidAppearNotification = @"YDSVProgressHUDDidAppearNotification";
 
-NSString * const SVProgressHUDStatusUserInfoKey = @"SVProgressHUDStatusUserInfoKey";
+NSString * const YDSVProgressHUDStatusUserInfoKey = @"YDSVProgressHUDStatusUserInfoKey";
 
 static YDProgressHUDStyle SVProgressHUDDefaultStyle;
 static SVProgressHUDMaskType SVProgressHUDDefaultMaskType;
@@ -658,7 +658,7 @@ static const CGFloat SVProgressHUDUndefinedProgress = -1;
 }
 
 - (NSDictionary*)notificationUserInfo{
-    return (self.stringLabel.text ? @{SVProgressHUDStatusUserInfoKey : self.stringLabel.text} : nil);
+    return (self.stringLabel.text ? @{YDSVProgressHUDStatusUserInfoKey : self.stringLabel.text} : nil);
 }
 
 - (void)positionHUD:(NSNotification*)notification{
@@ -783,24 +783,24 @@ static const CGFloat SVProgressHUDUndefinedProgress = -1;
 #pragma mark - Event handling
 
 - (void)overlayViewDidReceiveTouchEvent:(id)sender forEvent:(UIEvent*)event{
-    [[NSNotificationCenter defaultCenter] postNotificationName:SVProgressHUDDidReceiveTouchEventNotification object:event];
+    [[NSNotificationCenter defaultCenter] postNotificationName:YDSVProgressHUDDidReceiveTouchEventNotification object:event];
     
     UITouch *touch = event.allTouches.anyObject;
     CGPoint touchLocation = [touch locationInView:self];
     
     if(CGRectContainsPoint(self.hudView.frame, touchLocation)){
-        [[NSNotificationCenter defaultCenter] postNotificationName:SVProgressHUDDidTouchDownInsideNotification object:event];
+        [[NSNotificationCenter defaultCenter] postNotificationName:YDSVProgressHUDDidTouchDownInsideNotification object:event];
         return;
     }
     
 //    if(CGRectContainsPoint(self.closeBtn.frame, touchLocation)){
-//        [[NSNotificationCenter defaultCenter] postNotificationName:SVProgressHUDDidTouchDownInsideNotification object:event];
+//        [[NSNotificationCenter defaultCenter] postNotificationName:YDSVProgressHUDDidTouchDownInsideNotification object:event];
 //    }
 }
 
 - (void)cancelAction:(id)sender
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:SVProgressHUDDidTouchDownInsideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:YDSVProgressHUDDidTouchDownInsideNotification object:nil];
 }
 
 #pragma mark - Master show/dismiss methods
@@ -888,7 +888,7 @@ static const CGFloat SVProgressHUDUndefinedProgress = -1;
     // Appear
     if(self.alpha != 1 || self.hudView.alpha != 1){
         NSDictionary *userInfo = [self notificationUserInfo];
-        [[NSNotificationCenter defaultCenter] postNotificationName:SVProgressHUDWillAppearNotification
+        [[NSNotificationCenter defaultCenter] postNotificationName:YDSVProgressHUDWillAppearNotification
                                                             object:nil
                                                           userInfo:userInfo];
         
@@ -917,7 +917,7 @@ static const CGFloat SVProgressHUDUndefinedProgress = -1;
                              }
                          }
                          completion:^(BOOL finished){
-                             [[NSNotificationCenter defaultCenter] postNotificationName:SVProgressHUDDidAppearNotification
+                             [[NSNotificationCenter defaultCenter] postNotificationName:YDSVProgressHUDDidAppearNotification
                                                                                  object:nil
                                                                                userInfo:userInfo];
                              UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil);
@@ -1026,7 +1026,7 @@ static const CGFloat SVProgressHUDUndefinedProgress = -1;
 
 - (void)dismissWithDelay:(NSTimeInterval)delay{
     NSDictionary *userInfo = [self notificationUserInfo];
-    [[NSNotificationCenter defaultCenter] postNotificationName:SVProgressHUDWillDisappearNotification
+    [[NSNotificationCenter defaultCenter] postNotificationName:YDSVProgressHUDWillDisappearNotification
                                                         object:nil
                                                       userInfo:userInfo];
     
@@ -1077,7 +1077,7 @@ static const CGFloat SVProgressHUDUndefinedProgress = -1;
                                  
                                  UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil);
                                  
-                                 [[NSNotificationCenter defaultCenter] postNotificationName:SVProgressHUDDidDisappearNotification
+                                 [[NSNotificationCenter defaultCenter] postNotificationName:YDSVProgressHUDDidDisappearNotification
                                                                                      object:nil
                                                                                    userInfo:userInfo];
                                  

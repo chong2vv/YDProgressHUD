@@ -168,16 +168,16 @@
 		15C6473228AF7C6200D94631 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				15C6473328AF7C6200D94631 /* YDOverWriteSVProgressHUD.h */,
-				15C6473428AF7C6200D94631 /* SVProgressHUD+YDLottie.h */,
-				15C6473528AF7C6200D94631 /* UIViewController+Toast.m */,
-				15C6473628AF7C6200D94631 /* YDProgressHUDConfig.m */,
 				15C6473728AF7C6200D94631 /* YDProgressHUD.h */,
-				15C6473828AF7C6200D94631 /* YDOverWriteSVProgressHUD.m */,
-				15C6473928AF7C6200D94631 /* SVProgressHUD+YDLottie.m */,
 				15C6473A28AF7C6200D94631 /* YDProgressHUD.m */,
+				15C6473328AF7C6200D94631 /* YDOverWriteSVProgressHUD.h */,
+				15C6473828AF7C6200D94631 /* YDOverWriteSVProgressHUD.m */,
+				15C6473428AF7C6200D94631 /* SVProgressHUD+YDLottie.h */,
+				15C6473928AF7C6200D94631 /* SVProgressHUD+YDLottie.m */,
 				15C6473B28AF7C6200D94631 /* YDProgressHUDConfig.h */,
+				15C6473628AF7C6200D94631 /* YDProgressHUDConfig.m */,
 				15C6473C28AF7C6200D94631 /* UIViewController+Toast.h */,
+				15C6473528AF7C6200D94631 /* UIViewController+Toast.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
