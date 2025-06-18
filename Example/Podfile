@@ -1,9 +1,10 @@
 use_frameworks!
 
-platform :ios, '13.0'
+platform :ios, '10.0'
 
 target 'YDProgressHUD_Example' do
   pod 'YDSVProgressHUD', :path => '../'
+  
   
   # 添加以下配置来解决 ARC 相关问题
   post_install do |installer|
