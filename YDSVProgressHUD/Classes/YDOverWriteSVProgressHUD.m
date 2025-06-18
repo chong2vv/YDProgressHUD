@@ -211,6 +211,12 @@ static const CGFloat SVProgressHUDUndefinedProgress = -1;
     SVProgressHUDExtensionView = view;
 }
 
++ (void)setContainerView:(nullable UIView*)containerView {
+    [self sharedView];
+    [SVProgressHUD setContainerView:containerView];
+}
+
+
 
 #pragma mark - Show Methods
 

@@ -66,6 +66,7 @@ typedef NS_ENUM(NSInteger, YDProgressHUDStyle) {
 + (void)showImage:(UIImage*)image status:(NSString*)status maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showImage: and setDefaultMaskType: instead.")));
 // shows a image + status, use 50x50 images
 + (void)showImage:(UIImage*)image status:(NSString*)status duration:(NSTimeInterval)duration;
++ (void)setContainerView:(nullable UIView*)containerView;
 
 #warning 如果要更新SVProgressHUD,或者替换为pod管理, 注意这里的修改, 更新后可能无法使用该方法
 /// 扩展支持lottie动画
